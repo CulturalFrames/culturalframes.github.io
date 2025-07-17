@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CulturalFrames: Assessing Cultural Expectation Alignment in Text-to-Image Models and Evaluation Metrics">
+  <meta name="keywords" content="CulturalFrames, Text-to-Image, AI, Machine Learning, Benchmark, Multimodal, LLMs">
+  <meta name="author" content="CulturalFrames Research Team">
+  <title>CulturalFrames: Assessing Cultural Expectation Alignment in Text-to-Image Models and Evaluation Metrics</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-content">
+        <a href="#" class="navbar-brand">CulturalFrames</a>
+        <ul class="navbar-menu">
+          <li><a href="#about" class="navbar-item">About</a></li>
+          <!-- <li><a href="#tasks" class="navbar-item">Tasks</a></li> -->
+          <li><a href="#dataset" class="navbar-item">Dataset</a></li>
+          <li><a href="#explore" class="navbar-item">Explore</a></li>
+          <li><a href="#results" class="navbar-item">Results</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero hero-blend">
+    <div class="floating-circle-1"></div>
+    <div class="floating-circle-2"></div>
+    <div class="floating-circle-3"></div>
+    <div class="floating-square"></div>
+    <div class="floating-triangle"></div>
+    <div class="floating-diamond"></div>
+    <div class="floating-symbols">● ○ ◇ □</div>
+    <div class="floating-hexagon"></div>
+    <div class="floating-star"></div>
+    <div class="floating-oval"></div>
+    <div class="floating-cross"></div>
+    <div class="floating-wave"></div>
+    <div class="floating-dots">•••</div>
+    <div class="floating-arrow"></div>
+    <div class="floating-pentagon"></div>
+    <div class="container hero-flex">
+      <div class="hero-left">
+        <div class="hero-meta-badge-row">
+          <div class="hero-meta">MoFA Workshop @ ICML 2025</div>
+          <div class="hero-multilingual-badge">Text-to-Image benchmark</div>
+        </div>
+        <h1 class="hero-title">
+          CulturalFrames: Assessing Cultural Expectation Alignment in Text-to-Image Models and Evaluation Metrics
+        </h1>
+        <div class="hero-authors-compact">
+          <span>Shravan Nayak<sup>1,2*</sup></span>
+          <span>Mehar Bhatia<sup>1,3</sup></span>
+          <span>Xiaofeng Zhang<sup>1,2</sup></span>
+          <span>Verena Rieser<sup>5</sup></span>
+          <span>Lisa Anne Hendricks<sup>5</sup></span>
+          <span>Sjoerd van Steenkiste<sup>4</sup></span>
+          <span>Yash Goyal<sup>6</sup></span>
+          <span>Karolina Stańczak<sup>1,3,7</sup></span>
+          <span>Aishwarya Agrawal<sup>1,2</sup></span>
+        </div>
+        <div class="hero-affiliations-compact">
+          <span><sup>1</sup>Mila - Quebec AI Institute</span>
+          <span><sup>2</sup>Université de Montréal</span>
+          <span><sup>3</sup>McGill University</span>
+          <span><sup>4</sup>Google Research</span>
+          <span><sup>5</sup>Google DeepMind</span>
+          <span><sup>6</sup>Samsung - SAIT AI Lab, Montreal</span>
+          <span><sup>7</sup>ETH AI Center</span>
+        </div>
+    
+        <div class="hero-description">
+          Do text-to-image models “get” culture?
+We test whether their images capture both the explicit details you type into the prompt and the implicit cultural cues you don't. Using a suite of culture-anchored scenes, we evaluate the images they produce and the metrics meant to score them and uncover a wide gap between model output and what people actually expect.
+        </div>
+        <div class="hero-buttons">
+          <a href="https://www.arxiv.org/abs/2506.08835" class="hero-btn">📄 Paper</a>
+          <a href="#" class="hero-btn" style="pointer-events:none;opacity:0.6;white-space:nowrap;">💻 Code (coming soon)</a>
+          <a href="#" class="hero-btn" style="pointer-events:none;opacity:0.6;white-space:nowrap;">📥 Dataset (coming soon)</a>
+        </div>
+        <em>*Corresponding: <a href="mailto:shravan.nayak@mila.quebec">shravan.nayak@mila.quebec</a></em>
+
+      </div>
+      <div class="hero-right">
+        <img src="assets/cultural_frames_cover.png" alt="CulturalFrames Cover" class="hero-cover-image" />
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+        <h2 class="section-title">About</h2>
+
+      <p class="section-subtitle">
+        CulturalFrames tackles a key question: can today's text-to-image models and the metrics that judge them meet our cultural expectations? Existing benchmarks fixate on literal prompt matching or concept-centric checks, overlooking the nuanced cultural context that guides human judgment—and our study shows this blind spot is wide. 
+      </p>
+     
+  
+      <div class="card">
+      <ul class="features-list">
+        <li></li>The increasing ubiquity of text-to-image (T2I) models as tools for visual content generation raises concerns about their ability to accurately represent diverse cultural contexts. In this work, we present the first study to systematically quantify the alignment of T2I models and evaluation metrics with respect to both explicit as well as implicit cultural expectations. To this end, we introduce CulturalFrames, a novel benchmark designed for rigorous human evaluation of cultural representation in visual generations. Spanning 10 countries and 5 socio-cultural domains, CulturalFrames comprises 983 prompts, 3,637 corresponding images generated by 4 state-of-the-art T2I models, and over 10k detailed human annotations.</li>
+      </ul>
+        <img src="assets/dataset.png" alt="CulturalFrames dataset overview" class="image image-large" />
+        
+        <h3 class="card-title">Key Features</h3>
+        <ul class="features-list">
+          <li><strong>🌍 Culturally Rich Prompts:</strong> We design a methodoly to generate scenarios grounded in real-life cultural practices across 10 countries, covering domains like family, dates-of-significance, etiquette, religion and greetings.</li>
+          <li><strong>🎯 Implicit & Explicit Evaluation:</strong> We capture whether models reflect both directly stated (explicit) and contextually expected (implicit) cultural cues in generations.</li>
+          <li><strong>🧑🏽‍🤝‍🧑🏾 Diverse Human Judgments:</strong> Over 10,000 human ratings and free-form rationales collected from annotators with cultural familiarity and training across 4 criteria - image-prompt alignment, image quality, stereotype presence and overall satisfaction.</li>
+          <li><strong>📝 Word-Level Error Tagging:</strong> Annotators identify specific prompt words that are incorrectly visualized, enabling fine-grained diagnostic analysis of model behavior.</li>
+          <li><strong>📊 Model & Metric Benchmarking:</strong> Evaluates both text-to-image generation and metric performance, revealing where models and metrics diverge from human expectations</li>
+          <li><strong>💬 Explanation-Based Analysis:</strong> Natural language explanations for ratings provide deeper insight into model failures and cultural mismatches.</li>
+          <li><strong>📂 Open & Reproducible:</strong> All prompts, ratings, explanations, and model outputs will be publicly released for transparent, community-driven evaluation.</li>
+        </ul>
+      </div>
+    </div>
+    </section>
+
+
+    <!-- Dataset Section -->
+  <section id="dataset" class="section">
+    <div class="container">
+        <h2 class="section-title">Dataset Overview</h2>
+        <p class="section-subtitle">
+          CulturalFrames is built with rigorous quality standards to capture the richness and complexity of real-world cultural scenarios. 
+        </p>
+      
+      <div class="card">
+        <h3 class="card-title">Data Collection</h3>
+        <p style="font-size:1.0rem;line-height:1.6;margin-bottom:2rem;">
+          To construct our dataset, we first curated culturally grounded knowledge from five key categories—greetings, family structure, etiquette, religion, and dates of significance—using the Cultural Atlas database. We then prompted LLMs to ground this knowledge into culturally reflective image generation prompts. Each prompt was reviewed by three annotators from the respective country, and only prompts with majority agreement on their cultural appropriateness were retained. Images were generated using four state-of-the-art text-to-image models. To collect reliable annotations, we ran multiple pilot studies to refine the rating instructions, and implemented a quality control loop that included annotator filtering and continuous feedback for high-performing annotators. This process yields a culturally rich dataset with over 10,000 human ratings with scores and free-text rationales.
+        </p>
+        <div class="dataset-overview-flex" style="display: flex; flex-wrap: wrap; gap: 2.5rem; align-items: stretch; justify-content: center;">
+          <!-- Left: Distribution Image -->
+          <div class="dataset-overview-left" style="flex: 1 1 420px; min-width: 340px; max-width: 520px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
+            <img src="assets/overall_prompt_distribution.png" alt="Prompt Distribution by Domain" style="width:100%; max-width:380px; min-width:260px; aspect-ratio:1/1; border-radius: 16px; box-shadow: 0 2px 12px rgba(30,41,59,0.10); background: #fff; border: 1px solid #e2e8f0; margin-bottom: 1.1em;" />
+            <div class="dataset-image-caption" style="font-size:1.04em; color:#64748b; text-align:center; max-width:420px; margin-top:0.2em;">Distribution of prompts across five socio-cultural domains in CulturalFrames</div>
+          </div>
+          <!-- Right: Stats Table -->
+          <div class="dataset-overview-right" style="flex: 1 1 340px; min-width: 300px; max-width: 420px; display: flex; align-items: center; justify-content: flex-start; flex-direction: column;">
+            <div class="dataset-stats-grid">
+              <div class="stat-card">
+                <div class="stat-icon">📝</div>
+                <div class="stat-number">983</div>
+                <div class="stat-label">Cultural Prompts</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon">🖼️</div>
+                <div class="stat-number">3,637</div>
+                <div class="stat-label">Generated Images</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon">🤖</div>
+                <div class="stat-number">4</div>
+                <div class="stat-label">T2I Models</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon">✍️</div>
+                <div class="stat-number">10,000+</div>
+                <div class="stat-label">Human Annotations</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon">📋</div>
+                <div class="stat-number">4</div>
+                <div class="stat-label">Annotation Criteria</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon">👥</div>
+                <div class="stat-number">400+</div>
+                <div class="stat-label">Participants</div>
+              </div>
+            </div>
+            <div class="dataset-table-caption" style="font-size:1.04em; color:#64748b; text-align:center; max-width:420px; margin-top:0.9em;">Summary statistics for the CulturalFrames</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Dataset Exploration Section -->
+  <section id="explore" class="section">
+    <div class="container">
+      <h2 class="section-title">Explore CulturalFrames</h2>
+      <p class="section-subtitle">
+        Browse through samples from different countries in the CulturalFrames dataset.
+      </p>
+      
+      <!-- Country Selection Tabs -->
+      <div class="country-tabs">
+        <button class="country-tab active" data-country="india">🇮🇳 India</button>
+        <button class="country-tab" data-country="japan">🇯🇵 Japan</button>
+        <button class="country-tab" data-country="china">🇨🇳 China</button>
+        <button class="country-tab" data-country="iran">🇮🇷 Iran</button>
+        <button class="country-tab" data-country="germany">🇩🇪 Germany</button>
+        <button class="country-tab" data-country="poland">🇵🇱 Poland</button>
+        <button class="country-tab" data-country="south-africa">🇿🇦 South Africa</button>
+        <button class="country-tab" data-country="canada">🇨🇦 Canada</button>
+        <button class="country-tab" data-country="brazil">🇧🇷 Brazil</button>
+        <button class="country-tab" data-country="chile">🇨🇱 Chile</button>
+      </div>
+
+      <!-- Cultural Samples Display -->
+      <div class="cultural-samples">
+        <div class="sample-carousel">
+          <button class="carousel-btn prev" data-task="cultural">‹</button>
+          <div class="carousel-track" data-task="cultural">
+            <!-- Cultural samples will be loaded here -->
+          </div>
+          <button class="carousel-btn next" data-task="cultural">›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- BibTeX Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Citation</h2>
+      <div class="bibtex-block">
+@inproceedings{nayak2025culturalframes,
+  title={CulturalFrames: Assessing Cultural Expectation Alignment in Text-to-Image Models and Evaluation Metrics},
+  author={Shravan Nayak, Mehar Bhatia, Xiaofeng Zhang, Verena Rieser, Lisa Anne Hendricks, Sjoerd van Steenkiste, Yash Goyal, Karolina Stańczak, Aishwarya Agrawal},
+  booktitle={ICML 2025 Workshop on Models of Human Feedback for AI Alignment (MoFA)},
+  year={2025}
+}
+      </div>
+    </div>
+    </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 CulturalFrames Benchmark. This website has been adapted from the WebMMU website created by Rabiul Awal.</p>
+      <p>
+        <!-- <a href="" target="_blank">GitHub</a> •  -->
+        <a href="mailto:shravan.nayak@mila.quebec">Contact</a> • 
+        <a href="https://www.arxiv.org/abs/2506.08835" target="_blank">arXiv</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
