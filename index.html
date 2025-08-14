@@ -17,6 +17,7 @@
         <a href="#" class="navbar-brand">CulturalFrames</a>
         <ul class="navbar-menu">
           <li><a href="#about" class="navbar-item">About</a></li>
+          <li><a href="#news" class="navbar-item">News</a></li>
           <!-- <li><a href="#tasks" class="navbar-item">Tasks</a></li> -->
           <li><a href="#dataset" class="navbar-item">Dataset</a></li>
           <li><a href="#explore" class="navbar-item">Explore</a></li>
@@ -46,7 +47,6 @@
     <div class="container hero-flex">
       <div class="hero-left">
         <div class="hero-meta-badge-row">
-          <div class="hero-meta">MoFA Workshop @ ICML 2025</div>
           <div class="hero-multilingual-badge">Text-to-Image benchmark</div>
         </div>
         <h1 class="hero-title">
@@ -79,8 +79,8 @@ We test whether their images capture both the explicit details you type into the
         </div>
         <div class="hero-buttons">
           <a href="https://www.arxiv.org/abs/2506.08835" class="hero-btn">📄 Paper</a>
-          <a href="#" class="hero-btn" style="pointer-events:none;opacity:0.6;white-space:nowrap;">💻 Code (coming soon)</a>
-          <a href="#" class="hero-btn" style="pointer-events:none;opacity:0.6;white-space:nowrap;">📥 Dataset (coming soon)</a>
+          <a href="https://github.com/mair-lab/CulturalFrames" class="hero-btn">💻 Code</a>
+          <a href="https://huggingface.co/datasets/mair-lab/CulturalFrames" class="hero-btn">📥 Dataset</a>
         </div>
         <em>*Corresponding: <a href="mailto:shravan.nayak@mila.quebec">shravan.nayak@mila.quebec</a></em>
 
@@ -89,6 +89,33 @@ We test whether their images capture both the explicit details you type into the
         <img src="assets/cultural_frames_cover.png" alt="CulturalFrames Cover" class="hero-cover-image" />
       </div>
       
+    </div>
+  </section>
+
+  <!-- News Section -->
+  <section id="news" class="section">
+    <div class="container">
+      <h2 class="section-title">News</h2>
+      <div class="news-container">
+        <div class="news-item">
+          <div class="news-date">August 2025</div>
+          <div class="news-content">
+            <strong>Dataset and code release</strong> - CulturalFrames images and prompts released along with code for prompt/image generation and metric evaluation. Annotations will be released soon.
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">June 2025</div>
+          <div class="news-content">
+            <strong>Paper released on arXiv:</strong> <a href="https://www.arxiv.org/abs/2506.08835" target="_blank">CulturalFrames: Assessing Cultural Expectation Alignment in Text-to-Image Models and Evaluation Metrics</a>
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">May 2025</div>
+          <div class="news-content">
+            <strong>CulturalFrames accepted at ICML 2025 Workshop on Models of Human Feedback for AI Alignment (MoFA)</strong>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -127,7 +154,7 @@ We test whether their images capture both the explicit details you type into the
   <section id="dataset" class="section">
     <div class="container">
         <h2 class="section-title">Dataset Overview</h2>
-        <p class="section-subtitle">
+        <p class="section-subtitle-dataset-overview">
           CulturalFrames is built with rigorous quality standards to capture the richness and complexity of real-world cultural scenarios. 
         </p>
       
@@ -216,6 +243,182 @@ We test whether their images capture both the explicit details you type into the
           <button class="carousel-btn next" data-task="cultural">›</button>
         </div>
       </div>
+
+      <!-- Annotation Browsing Section -->
+      <div class="annotation-section">
+        <h3 class="annotation-subtitle">Browse CulturalFrames Annotations</h3>
+        <p class="annotation-description">
+          Explore human evaluations of cultural alignment, quality, stereotype and overall satisfaction across different countries.
+        </p>
+        
+        <!-- Annotation Display -->
+        <div class="annotation-samples">
+          <div class="annotation-carousel">
+            <button class="carousel-btn prev" data-task="annotation">‹</button>
+            <div class="carousel-track" data-task="annotation">
+              <!-- Annotation samples will be loaded here -->
+            </div>
+            <button class="carousel-btn next" data-task="annotation">›</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results Section -->
+  <section id="results" class="section">
+    <div class="container">
+      <h2 class="section-title">Results</h2>
+      <p class="section-subtitle">
+        Our evaluation reveals significant gaps in cultural alignment across both text-to-image models and evaluation metrics.
+      </p>
+      
+      <!-- Models Subsection -->
+      <div class="results-subsection">
+        <h3 class="subsection-title">Models Performance</h3>
+        
+        <!-- Model Summary Scores -->
+        <div class="card">
+          <h4 class="card-title">Model Performance Summary</h4>
+          <p class="card-description">
+            Human evaluations show GPT-Image leads in prompt alignment (0.85) and overall preference, with Imagen3 rated highest for image quality. Open-source models SD-3.5-Large and Flux lag, with SD performing worst due to low quality and higher stereotype rates. Stereotypical outputs occur in 10-16% of images, most for SD and least for Flux. Cross-country differences are notable, with Asian countries giving lower scores. Of all sub-perfect ratings, 50.3% are explicit errors, 31.2% implicit, and 17.9% both, showing persistent cultural nuance challenges.
+          </p>
+          <div class="asymmetric-graph-container">
+            <div class="asymmetric-graph-large">
+              <img src="assets/combined_metrics.png" alt="Combined Metrics Across Countries" class="image"
+                   style="max-width: 100%; height: auto; background: #f8f9fa; border: 2px dashed #ddd; padding: 0.8rem; text-align: center;"
+                   onerror="this.innerHTML='<div style=&quot;text-align:center;padding:2rem;color:#666;font-size:1rem;&quot;>📊 Combined Metrics<br><small>(Coming Soon)</small></div>'">
+              <div class="graph-caption">Human evaluation results for selected T2I models. From left to right: 1) Prompt Alignment (0-1 scale). 2) Image Quality (0-1 scale). 3) Stereotype Score (0-1 scale, 0 indicates no stereotyping). 4) Overall Score (1-5 Likert scale).</div>
+            </div>
+            <div class="asymmetric-graph-small">
+              <img src="assets/stacked_error_distribution.png" alt="Error Distribution Across Countries" class="image"
+                   style="max-width: 100%; height: auto; background: #f8f9fa; border: 2px dashed #ddd; padding: 0.8rem; text-align: center;"
+                   onerror="this.innerHTML='<div style=&quot;text-align:center;padding:2rem;color:#666;font-size:1rem;&quot;>📈 Error Distribution<br><small>(Coming Soon)</small></div>'">
+              <div class="graph-caption">Distribution of image-prompt alignment errors (score < 1) by model, grouped by error type.</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Cross-Country Disparity -->
+        <div class="card">
+          <h4 class="card-title">Cultural Disparity Across Countries</h4>
+          <p class="card-description">
+            There is a disparity in model performance across countries, for different criteria. Images generated for Asian countries such as Japan and Iran generally have lower scores across all criteria. The plots below show performance metrics and error distributions across countries.
+          </p>
+          <div class="graph-placeholder">
+            <img src="assets/country_wise_scores_pa.png" alt="Model Disparity Across Countries" class="image image-large"
+                 style="max-width: 100%; height: auto; background: #f8f9fa; border: 2px dashed #ddd; padding: 0.6rem; text-align: center;"
+                 onerror="this.innerHTML='<div style=&quot;text-align:center;padding:2rem;color:#666;font-size:1.1rem;&quot;>📈 Cross-Country Disparity Graph<br><small>(Coming Soon)</small></div>'">
+          </div>
+        </div>
+        
+        <!-- Word Misinterpretation Analysis -->
+        <div class="card">
+          <h4 class="card-title">Word Misinterpretation Analysis</h4>
+          <p class="card-description">
+            Words highlighted as problematic in prompts flagged by raters highlights two main error patterns. Country demonyms (e.g., Iranian, Brazilian) are often marked when an image lacks the expected country-specific element or when annotators cannot relate to its content. Other frequent errors involve broad cultural signifiers—such as rituals, social roles, and iconic objects—showing that T2I models often misrepresent these elements.
+          </p>
+          <div class="graph-placeholder">
+            <img src="assets/word_frequency.png" alt="Word Misinterpretation Frequency Analysis" class="image"
+                 style="max-width: 100%; max-height: 700px; width: auto; height: auto; background: #f8f9fa; border: 2px dashed #ddd; padding: 0.6rem; text-align: center; object-fit: contain;"
+                 onerror="this.innerHTML='<div style=&quot;text-align:center;padding:2rem;color:#666;font-size:1.1rem;&quot;>📊 Word Frequency Analysis<br><small>(Coming Soon)</small></div>'">
+          </div>
+        </div>
+        
+        <!-- Model Failure Cases -->
+        <!-- <div class="card">
+          <h4 class="card-title">Model Failure Cases</h4>
+          <p class="card-description">
+            Explore specific examples where different models fail to capture cultural expectations.
+          </p>
+          
+          <!-- Model Selection Tabs -->
+          <!-- <div class="model-tabs">
+            <button class="model-tab active" data-model="gptimage">GPT-Image</button>
+            <button class="model-tab" data-model="imagen3">Imagen3</button>
+            <button class="model-tab" data-model="flux1dev">Flux.1-Dev</button>
+            <button class="model-tab" data-model="sd35large">SD-3.5 Large</button>
+          </div> -->
+          
+          <!-- Model Failure Display -->
+          <!-- <div class="model-failures">
+            <div class="model-failure-carousel">
+              <button class="carousel-btn prev" data-task="model-failure">‹</button>
+              <div class="carousel-track" data-task="model-failure">
+                <!-- Model failure samples will be loaded here -->
+              <!-- </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      
+      <!-- Metrics Subsection -->
+      <div class="results-subsection">
+        <h3 class="subsection-title">Evaluation Metrics Analysis</h3>
+        
+        <!-- Metric Performance -->
+        <div class="card">
+          <h4 class="card-title">Metric Alignment with Human Judgment</h4>
+          <p class="card-description">
+            Metrics correlate poorly with human judgments. VIEScore and UnifiedReward show the strongest alignment, though still below human-human agreement. All metrics perform poorly on image quality. Overall, VLM-based metrics best capture culturally grounded preferences.
+          </p>
+          <div class="graph-placeholder">
+            <img src="assets/human_correlation.png" alt="Metric Alignment Analysis" class="image"
+                 style="max-width: 100%; max-height: 400px; width: auto; height: auto; background: #f8f9fa; border: 2px dashed #ddd; padding: 0.6rem; text-align: center; object-fit: contain;"
+                 onerror="this.innerHTML='<div style=&quot;text-align:center;padding:2rem;color:#666;font-size:1rem;&quot;>📏 Metric Alignment Graph<br><small>(Coming Soon)</small></div>'">
+          </div>
+        </div>
+        
+        <!-- Metric Failure Cases -->
+        <div class="card">
+          <h4 class="card-title">Metric vs Human Evaluation Discrepancies</h4>
+          <p class="card-description">
+            The reasons provided by automatic metrics are often not aligned with human judgments. Below we present some examples where automated evaluation metrics disagree with human cultural assessment.
+          </p>
+          
+          <!-- Metric Failure Display -->
+          <div class="metric-failures">
+            <div class="metric-failure-carousel">
+              <button class="carousel-btn prev" data-task="metric-failure">‹</button>
+              <div class="carousel-track" data-task="metric-failure">
+                <!-- Metric failure samples will be loaded here -->
+              </div>
+              <button class="carousel-btn next" data-task="metric-failure">›</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Discussion -->
+        
+          <h3 class="subsection-title">Improving Models and Metrics</h3>
+          <div class="card">
+          <p class="card-description">
+            Based on our analysis of cultural misalignment in text-to-image models and their evaluation metrics, we highlight three key directions for improvement.
+          </p>
+          
+          <div class="discussion-section">
+            <h5 class="discussion-subheading">📝 Prompt Enhancement</h5>
+            <p class="discussion-content">
+              We expand culturally implicit prompts in CulturalFrames by automatically adding missing cues (cultural objects, family roles, setting details, mood/atmosphere) based on our analysis of model failures. We generate images for the new prompts using Flux.1-Dev and evaluate alignment with VIEScore. This targeted, culturally informed expansion improves VIEScore from 7.3 for original prompts to 8.4 for the expanded prompts, showing that making implicit cues explicit helps better image generation.
+            </p>
+          </div>
+          
+          <div class="discussion-section">
+            <h5 class="discussion-subheading">📏 Metric Design</h5>
+            <p class="discussion-content">
+              We rewrote VIEScore's GPT-4o instructions using our human rater guidelines to make both implicit and explicit cues salient, then re-evaluated image-prompt alignment. This raised Spearman correlation with human ratings from 0.30 to 0.32 and improved explanation alignment from 2.19 to 2.37 (5-point scale). Carefully crafted, culturally informed instructions thus boost both scores and rationales.
+            </p>
+          </div>
+          
+          <div class="discussion-section">
+            <h5 class="discussion-subheading">🎯 Metric Training</h5>
+            <p class="discussion-content">
+              We compare a preference-trained judge (UnifiedReward on Qwen2.5-VL-7B) to its backbone and find consistently higher correlations with human judgments. It even edges out GPT-4o-based VIEScore on alignment (0.31 vs 0.30). Preference-based judge training, even without culture-specific data, meaningfully improves cultural alignment of metric scores and CulturalFrames can be used to push this further.
+            </p>
+          </div>
+        </div>
+      </div>
+      
     </div>
   </section>
 
@@ -237,7 +440,7 @@ We test whether their images capture both the explicit details you type into the
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 CulturalFrames Benchmark. This website has been adapted from the WebMMU website created by Rabiul Awal.</p>
+      <p>&copy; 2025 CulturalFrames Benchmark. This website has been adapted from the WebMMU website created by Rabiul Awal and redesigned with the help of Claude.</p>
       <p>
         <!-- <a href="" target="_blank">GitHub</a> •  -->
         <a href="mailto:shravan.nayak@mila.quebec">Contact</a> • 
@@ -246,6 +449,9 @@ We test whether their images capture both the explicit details you type into the
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/cultural-data.js"></script>
+  <script src="js/annotation-data.js"></script>
+  <script src="js/metric-failure-data.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
