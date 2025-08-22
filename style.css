@@ -624,6 +624,20 @@ body {
   box-shadow: 0 1px 6px rgba(30,72,94,0.06);
 }
 
+.hero-emnlp-badge {
+  display: inline-block;
+  background: linear-gradient(90deg, #dcfce7 0%, #fef3c7 100%);
+  color: #166534;
+  font-weight: 600;
+  font-size: 1.05rem;
+  border-radius: var(--border-radius-xl);
+  padding: 0.22em 1.1em;
+  margin-bottom: var(--space-3);
+  margin-top: var(--space-1);
+  letter-spacing: 0.01em;
+  box-shadow: 0 1px 6px rgba(21,128,61,0.08);
+}
+
 .hero-meta-badge-row {
   display: flex;
   flex-wrap: wrap;
